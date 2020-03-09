@@ -1,0 +1,164 @@
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 100upx;
+	position: relative;
+	margin-bottom: 20upx;
+}
+
+.header .left,
+.header .right {
+	width: 100upx;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30upx;
+}
+
+.header .left {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.header .right {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.header .right.false {
+	color: #ccc;
+}
+
+.header .title {
+	color: #333;
+	font-size: 36upx;
+	font-weight: bold;
+	text-align: center;
+	padding: 20upx 0;
+}
+
+.section {
+	width: 100%;
+}
+
+.section .weeks {
+	width: 98vw;
+	margin: auto;
+	display: flex;
+	font-size: 24upx;
+	color: #999;
+	padding-bottom: 20upx;
+	border-bottom: 1px solid #ccc;
+}
+
+.section .week_li {
+	width: 14vw;
+	text-align: center;
+}
+
+.section .days {
+	width: 98vw;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+}
+
+.section .days .day {
+	width: 14vw;
+	height: 14vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 26upx;
+	color: #323232;
+	position: relative;
+	box-sizing: border-box;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+
+.section .days .day:nth-child(7n+1) {
+	border-left: 1px solid #ccc;
+}
+
+.section .days .day.last_month,
+.section .days .day.next_month {
+	color: #ccc;
+}
+
+.section .days .day.true {
+	color: #09bb00;
+}
+
+.section .days .day.false,
+.section .days .day.true,
+.section .days .day.repair {
+	color: #fff;
+}
+
+.section .days .day text {
+	position: relative;
+	font-size: 22upx;
+	z-index: 0;
+}
+
+.section .days>.day::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 80upx;
+	height: 80upx;
+	border-radius: 50%;
+	z-index: 0;
+}
+
+.section .days>.day.true::before {
+	background: #09bb00;
+}
+
+.section .days .day.repair::before {
+	background: orangered;
+}
+
+.section .days .day.false::before {
+	background: red;
+}
+
+.footer .tip {
+	font-size: 24upx;
+	color: #aaa;
+	padding: 20upx 24upx;
+}
+
+.footer .signin {
+	display: flex;
+	justify-content: center;
+	margin-top: 50upx;
+}
+
+.footer .signin .btn {
+	font-size: 28upx;
+	color: #fff;
+	width: 200upx;
+	text-align: center;
+	padding: 20upx 0;
+	border-radius: 10upx;
+}
+
+.footer .signin .btn.true {
+	background: #09bb00;
+}
+
+.footer .signin .btn.false {
+	background: #ccc;
+}
